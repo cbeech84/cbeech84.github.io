@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End of Survey Query String Reader</title>
+</head>
+<body>
+    <h1>Text from URL Query String</h1>
+    <p id="displayText"></p>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const text = urlParams.get('text'); // Get the text from the 'text' parameter
+        document.getElementById('displayText').textContent = text ? text : "No text provided.";
+    </script>
+</body>
+</html>
